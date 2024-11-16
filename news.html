@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graschatium - Actualités</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff6a00;
+        }
+
+        /* Section des actualités */
+        .news-container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .news-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .news-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .news-content .date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .news-content a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #ff6a00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .news-content a:hover {
+            background-color: #e65a00;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="logo">Graschatium</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="play.html">Jouer</a>
+            <a href="#news">Actualités</a>
+            <a href="#support">Support</a>
+        </nav>
+    </header>
+
+    <!-- Section des actualités -->
+    <div class="news-container" id="news">
+        <h1>Actualités depuis le début</h1>
+
+        <!-- Article 1 -->
+        <div class="news-item">
+            <img src="news1.jpg" alt="Annonce de lancement">
+            <div class="news-content">
+                <h2>Annonce de lancement</h2>
+                <p class="date">Publié le 1er janvier 2024</p>
+                <p>Bienvenue sur Graschatium, votre nouveau portail de jeux et de divertissements. Explorez un univers fascinant dès aujourd'hui !</p>
+                <a href="#">Lire la suite</a>
+            </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="news-item">
+            <img src="news2.jpg" alt="Nouveau serveur PvP">
+            <div class="news-content">
+                <h2>Nouveau serveur PvP disponible</h2>
+                <p class="date">Publié le 15 février 2024</p>
+                <p>Nous avons ouvert un tout nouveau serveur PvP, où vous pouvez montrer vos talents et affronter d'autres joueurs du monde entier.</p>
+                <a href="#">Lire la suite</a>
+            </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="news-item">
+            <img src="news3.jpg" alt="Mise à jour 1.1">
+            <div class="news-content">
+                <h2>Mise à jour 1.1 : Nouvelles fonctionnalités</h2>
+                <p class="date">Publié le 10 mars 2024</p>
+                <p>La dernière mise à jour apporte de nouvelles fonctionnalités passionnantes, y compris de nouvelles armes, skins, et bien plus encore.</p>
+                <a href="#">Lire la suite</a>
+            </div>
+        </div>
+
+        <!-- Ajoutez d'autres articles ici -->
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">Conditions générales</a></p>
+    </footer>
+</body>
+</html>
