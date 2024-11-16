@@ -1,14 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paladium Inspired Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Graschatium</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff6a00;
+        }
+
+        /* Section Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #ff6a00, #ff9a00);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #fff;
+            color: #ff6a00;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #ff6a00;
+            color: white;
+        }
+
+        /* Section Articles */
+        .articles {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .articles h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .articles .article-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .articles .article-card {
+            width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .articles .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .articles .article-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .articles .article-card h3 {
+            padding: 15px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .articles .article-card a {
+            display: block;
+            padding: 15px;
+            text-align: center;
+            background-color: #ff6a00;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .articles .article-card a:hover {
+            background-color: #e65a00;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <!-- En-tête -->
     <header>
-        <div class="logo">Paladium</div>
+        <div class="logo">Graschatium</div>
         <nav>
             <a href="#news">News</a>
             <a href="#support">Support</a>
@@ -17,30 +170,33 @@
         </nav>
     </header>
 
+    <!-- Section Hero -->
     <section class="hero">
-        <h1>Commencez Votre Aventure !</h1>
-        <p>Paladium est le premier serveur PVP Faction français. Rejoignez l'aventure exclusive !</p>
-        <button>Télécharger</button>
+        <h1>Bienvenue sur Graschatium</h1>
+        <p>Découvrez un univers fascinant avec nos factions, évènements et mises à jour incroyables.</p>
+        <button>Télécharger Maintenant</button>
     </section>
 
+    <!-- Section Articles -->
     <section class="articles" id="news">
-        <h2>Nos Articles</h2>
+        <h2>Dernières nouvelles</h2>
         <div class="article-grid">
             <div class="article-card">
-                <img src="article1.jpg" alt="PatchNote 10.0.5">
-                <h3>Paladium - PatchNote V10.0.5.0</h3>
+                <img src="article1.jpg" alt="Article 1">
+                <h3>Graschatium PatchNote 10.0.5</h3>
                 <a href="#">Lire l'article</a>
             </div>
             <div class="article-card">
-                <img src="article2.jpg" alt="Summer Smash">
-                <h3>Le Black Market est de retour !</h3>
+                <img src="article2.jpg" alt="Article 2">
+                <h3>Rejoignez l'évènement Black Market</h3>
                 <a href="#">Lire l'article</a>
             </div>
         </div>
     </section>
 
+    <!-- Pied de page -->
     <footer>
-        <p>© 2024 Paladium. Tous droits réservés. <a href="#terms">CGU</a> | <a href="#privacy">RGPD</a></p>
+        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">CGU</a> | <a href="#privacy">Confidentialité</a></p>
     </footer>
 </body>
 </html>
