@@ -1,153 +1,193 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graschatium - Serveur pvp-factions français</title>
+    <title>Graschatium</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #333;
         }
+
+        /* Header Section */
         header {
-            background-color: #2E3131;
-            color: white;
-            padding: 10px 20px;
+            background-color: white;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 2px solid #eaeaea;
         }
-        header a {
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6a00;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #ff6a00;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .hero button {
+            background-color: #ff6a00;
             color: white;
-            text-decoration: none;
-            margin: 0 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
         }
-        header h1 {
-            margin: 0;
+
+        .hero button:hover {
+            background-color: #e65a00;
         }
-        main {
+
+        /* Articles Section */
+        .articles {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .articles h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .articles .article-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .articles .article-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .articles .article-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .articles .article-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .articles .article-card h3 {
             padding: 20px;
+            font-size: 1.2rem;
+            color: #333;
         }
-        h1, h2 {
-            color: #5E6E74;
-        }
-        h2 {
-            margin-top: 30px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin: 5px 0;
-        }
-        a {
+
+        .articles .article-card a {
+            display: block;
+            padding: 15px 20px;
+            background-color: #ff6a00;
+            color: white;
+            text-align: center;
             text-decoration: none;
-            color: #2E6F91;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
         }
-        a:hover {
-            color: #4B91B2;
+
+        .articles .article-card a:hover {
+            background-color: #e65a00;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Graschatium</h1>
-        <div>
+        <div class="logo">Graschatium</div>
+        <nav>
             <a href="#news">News</a>
             <a href="#support">Support</a>
             <a href="#wiki">Wiki</a>
-            <a href="#boutique">Boutique</a>
-            <a href="#mini-jeux">Mini-Jeux</a>
-            <a href="#recrutements">Recrutements</a>
-            <a href="#play">Jouer</a>
-        </div>
+            <a href="#shop">Boutique</a>
+        </nav>
     </header>
 
-    <main>
-        <h2>REJOIGNEZ GRASCHATIUM - Commencez Votre Aventure!</h2>
-        <p>Graschatium est l'un des premiers serveurs PVP faction français. Nous proposons une aventure exclusive sur Minecraft!</p>
-        <ul>
-            <li>2 Joueurs uniques</li>
-            <li>1 Joueurs journaliers</li>
-        </ul>
+    <section class="hero">
+        <h1>Bienvenue sur Graschatium</h1>
+        <p>Rejoignez la plus grande aventure avec nos factions et notre incroyable communauté.</p>
+        <button>Télécharger Maintenant</button>
+    </section>
 
-        <h2>Nos articles</h2>
-        <ul>
-            <li><a href="#lucky-block-may">Lucky Block - Édition de Mai</a></li>
-            <li><a href="#paladium-patch-note-v9.5.11.0">Paladium - Patch Note V9.5.11.0 | 03/05/2024</a></li>
-            <li><a href="#les-bases-pillage-d-une-base-claim">Les Bases - Pillage d'une base claim</a></li>
-            <li><a href="#lucky-block-7">Lucky Block - 7</a></li>
-            <li><a href="#paladium-companion-uporte">Graschatium pvp-factions</a></li>
-            <li><a href="#paladium-patch-note-v9.5.9.0">Paladium - Patch Note BÊTA | 28/03/2024</a></li>
-            <li><a href="#comment-ca-fonctionne">Comment ça fonctionne ?</a></li>
-        </ul>
+    <section class="articles" id="news">
+        <h2>Nos Derniers Articles</h2>
+        <div class="article-grid">
+            <div class="article-card">
+                <img src="article1.jpg" alt="PatchNote 10.0.5">
+                <h3>Graschatium - Mise à Jour V10.0.5.0</h3>
+                <a href="#">Lire l'article</a>
+            </div>
+            <div class="article-card">
+                <img src="article2.jpg" alt="Summer Smash">
+                <h3>Le Black Market revient !</h3>
+                <a href="#">Lire l'article</a>
+            </div>
+        </div>
+    </section>
 
-        <h2 id="lucky-block-may">Lucky Block - Édition de Mai</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="paladium-patch-note-v9.5.11.0">Paladium - Patch Note V9.5.11.0 | 03/05/2024</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="les-bases-pillage-d-une-base-claim">Les Bases - Pillage d'une base claim</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="lucky-block-7">Lucky Block - 7</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="paladium-companion-uporte">Paladium Companion UPORTE</h2>
-        <ul>
-            <li><a href="#lucky-block-edition-de-paques">Lucky Block - Édition de Pâques</a></li>
-            <li><a href="#paladium-patch-note-v9.5.10.0">Paladium - Patch Note V9.5.10.0 | 04/04/2024</a></li>
-        </ul>
-
-        <h2 id="lucky-block-edition-de-paques">Lucky Block - Édition de Pâques</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="paladium-patch-note-v9.5.10.0">Paladium - Patch Note V9.5.10.0 | 04/04/2024</h2>
-        <p>Lire l'article</p>
-
-        <h2 id="comment-ca-fonctionne">Comment ça fonctionne ?</h2>
-        <ol>
-            <li><a href="#telechargez-le-launcher">Téléchargez le launcher</a></li>
-            <li><a href="#installez-le-launcher">Installez le launcher</a></li>
-            <li><a href="#rejoignez-le-serveur-et-jouez">Rejoignez le serveur et jouez!</a></li>
-        </ol>
-
-        <h2 id="telechargez-le-launcher">Téléchargez le launcher</h2>
-        <p>Vous devez posséder un compte Minecraft Java.</p>
-
-        <h2 id="installez-le-launcher">Installez le launcher</h2>
-        <p>Lorsque vous avez téléchargé le launcher, il suffit d'installer celui-ci en double cliquant et en vous connectant avec votre compte Minecraft.</p>
-
-        <h2 id="rejoignez-le-serveur-et-jouez">Rejoignez le serveur et jouez!</h2>
-        <p>Cliquez sur "jouer", le jeu se lance et il ne suffit plus qu'à appuyer sur "rejoindre".</p>
-
-        <h2>Disponible également sur :</h2>
-        <ul>
-            <li>Windows</li>
-            <li>macOS</li>
-        </ul>
-
-        <h2>À propos</h2>
-        <p>Paladium est le premier serveur pvp faction français. Nous proposons une aventure exclusive sur Minecraft !</p>
-
-        <h2>Plus qu'un serveur</h2>
-        <ul>
-            <li>Une infrastructure puissante</li>
-            <li>Un staff à l'écoute</li>
-            <li>Un mod exclusif</li>
-        </ul>
-
-        <h2>Liens Utiles</h2>
-        <ul>
-            <li><a href="#probleme-lors-de-la-connexion-t">PROBLEME LORS DE LA CONNEXION</a></li>
-            <li><a href="#nous-rejoindre">Nous rejoindre</a></li>
-            <li><a href="#telecharger">Télécharger</a></li>
-            <li><a href="#">Launcher Windows</a></li>
-        </ul>
-    </main>
+    <footer>
+        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">CGU</a> | <a href="#privacy">RGPD</a></p>
+    </footer>
 </body>
 </html>
