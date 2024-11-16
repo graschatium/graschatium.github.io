@@ -5,173 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graschatium - FAQ</title>
     <style>
-        /* Styles globaux */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        /* En-tête */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        header nav a:hover {
-            color: #ff6a00;
-        }
-
-        /* Contenu principal */
-        .faq-container {
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .faq-container h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .faq-container p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .faq-container .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-container .faq-item h2 {
-            font-size: 1.2rem;
-            color: #ff6a00;
-            cursor: pointer;
-            margin: 0;
-        }
-
-        .faq-container .faq-item p {
-            font-size: 1rem;
-            color: #333;
-            margin: 10px 0 0 0;
-            display: none;
-        }
-
-        /* Pied de page */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        footer a {
-            color: #ff6a00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: text-decoration 0.3s ease;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        /* Styles identiques à play.html */
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqItems = document.querySelectorAll('.faq-item h2');
-            faqItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const content = item.nextElementSibling;
-                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        });
-    </script>
 </head>
 <body>
-    <!-- En-tête -->
     <header>
-        <div class="logo">Graschatium</div>
+        <h1>Graschatium</h1>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="news.html">Actualités</a>
             <a href="play.html">Jouer</a>
-            <a href="support.html">Support</a>
+            <a href="download.html">Téléchargement</a>
             <a href="staff.html">Staff</a>
-            <a href="faq.html">FAQ</a>
+            <a href="bugs.html">Bug Report</a>
+            <a href="support.html">Support</a>
         </nav>
     </header>
 
-    <!-- Contenu principal -->
-    <div class="faq-container">
-        <h1>FAQ - Foire Aux Questions</h1>
-        <p>Retrouvez ici les réponses aux questions les plus fréquentes sur Graschatium.</p>
+    <main>
+        <h1>FAQ - Questions Fréquentes</h1>
+        <h2>Comment rejoindre le serveur ?</h2>
+        <p>Téléchargez notre launcher depuis la page de téléchargement et connectez-vous avec votre compte Minecraft Java.</p>
 
-        <div class="faq-item">
-            <h2>Comment rejoindre le serveur Graschatium ?</h2>
-            <p>
-                Pour rejoindre Graschatium, téléchargez le launcher depuis notre site officiel, installez-le, et connectez-vous avec votre compte Minecraft Java.
-            </p>
-        </div>
+        <h2>Le serveur est-il gratuit ?</h2>
+        <p>Oui, Graschatium est entièrement gratuit. Cependant, des options de soutien sont disponibles via la boutique.</p>
 
-        <div class="faq-item">
-            <h2>Quels sont les prérequis pour jouer sur Graschatium ?</h2>
-            <p>
-                Vous devez posséder un compte Minecraft Java Edition et un ordinateur sous Windows ou macOS. Les performances peuvent varier en fonction des configurations matérielles.
-            </p>
-        </div>
+        <h2>Quel est le mode principal ?</h2>
+        <p>Graschatium est un serveur PvP-Factions avec des fonctionnalités uniques et des events réguliers.</p>
 
-        <div class="faq-item">
-            <h2>Graschatium est-il gratuit ?</h2>
-            <p>
-                Oui, le serveur est totalement gratuit. Certaines fonctionnalités optionnelles ou objets cosmétiques peuvent être disponibles à l'achat dans notre boutique en ligne.
-            </p>
-        </div>
+        <h2>Puis-je devenir membre du staff ?</h2>
+        <p>Les recrutements ouvrent régulièrement. Consultez la page <a href="recruitment.html">Recrutements</a> pour plus d'informations.</p>
 
-        <div class="faq-item">
-            <h2>Que faire si je rencontre un bug ?</h2>
-            <p>
-                Si vous rencontrez un problème, vous pouvez le signaler en remplissant le formulaire dédié sur la page des <a href="bugs.html">rapports de bugs</a>.
-            </p>
-        </div>
+        <h2>Que faire en cas de bug ?</h2>
+        <p>Utilisez notre formulaire sur la page <a href="bugs.html">Bug Report</a>.</p>
+    </main>
 
-        <div class="faq-item">
-            <h2>Comment rejoindre l'équipe du serveur (staff) ?</h2>
-            <p>
-                Pour rejoindre notre équipe, consultez la page <a href="recrutements.html">recrutements</a>. Les informations et critères requis y sont listés.
-            </p>
-        </div>
-    </div>
-
-    <!-- Pied de page -->
     <footer>
-        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">Conditions générales</a></p>
+        <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

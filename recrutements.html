@@ -5,87 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graschatium - Recrutement</title>
     <style>
-                /* Styles globaux */
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #f5f5f5;
-                    color: #333;
-                }
-        
-                /* En-tête */
-                header {
-                    background-color: #333;
-                    color: white;
-                    padding: 15px 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-        
-                header .logo {
-                    font-size: 1.5em;
-                    font-weight: bold;
-                }
-        
-                header nav a {
-                    color: white;
-                    text-decoration: none;
-                    margin-left: 15px;
-                    font-weight: bold;
-                    transition: color 0.3s ease;
-                }
-        
-                header nav a:hover {
-                    color: #ff6a00;
-                }
-        
+        /* Styles globaux */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fafafa;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            color: #ecf0f1;
         }
+
+        /* En-tête */
         header {
-            background-color: #2c3e50;
+            background-color: #1abc9c;
             color: white;
-            padding: 15px 0;
-            text-align: center;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #16a085;
+        }
+
+        /* Contenu principal */
         main {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
+        .content-container {
+            margin: 0 auto;
+            text-align: center;
+        }
+
         h1 {
             margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 1.5em;
+            font-size: 2.5em;
             color: #34495e;
         }
+
         p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.6;
             color: #7f8c8d;
+            margin-bottom: 30px;
         }
+
         iframe {
             width: 100%;
             height: 2000px;
             border: none;
         }
+
+        /* Pied de page */
         footer {
-            text-align: center;
-            padding: 10px 0;
             background-color: #2c3e50;
             color: white;
+            padding: 10px 0;
+            text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -104,22 +108,24 @@
     </header>
 
     <main>
-        <h2>Postulez pour rejoindre l'aventure Graschatium !</h2>
-        <p>
-            Vous aimez Minecraft et cherchez une expérience unique dans une communauté active et bienveillante ? 
-            Graschatium vous invite à rejoindre son équipe ! Nous cherchons des joueurs passionnés pour divers rôles au sein de notre serveur, que ce soit pour l'administration, l'animation, ou pour aider au développement.
-        </p>
-        <p>
-            Si vous souhaitez faire partie de cette aventure, remplissez le formulaire ci-dessous pour postuler et nous faire part de vos compétences et motivations !
-        </p>
+        <div class="content-container">
+            <h1>Postulez pour rejoindre l'aventure Graschatium !</h1>
+            <p>
+                Vous aimez Minecraft et cherchez une expérience unique dans une communauté active et bienveillante ? 
+                Graschatium vous invite à rejoindre son équipe ! Nous cherchons des joueurs passionnés pour divers rôles au sein de notre serveur, que ce soit pour l'administration, l'animation, ou pour aider au développement.
+            </p>
+            <p>
+                Si vous souhaitez faire partie de cette aventure, remplissez le formulaire ci-dessous pour postuler et nous faire part de vos compétences et motivations !
+            </p>
 
-        <!-- Google Form embedded -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd39IjA5lWToYK5wfOX8B8qT28SyTiE09ktXmLBUpGoJjW_5A/viewform?embedded=true" 
-                width="640" 
-                height="1887" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0">Chargement…</iframe>
+            <!-- Google Form embedded -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd39IjA5lWToYK5wfOX8B8qT28SyTiE09ktXmLBUpGoJjW_5A/viewform?embedded=true" 
+                    width="100%" 
+                    height="2000" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Chargement…</iframe>
+        </div>
     </main>
 
     <footer>

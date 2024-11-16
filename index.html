@@ -3,202 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graschatium</title>
+    <title>Graschatium - Accueil</title>
     <style>
-        /* Styles globaux */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* En-tête */
-        header {
-            background-color: #333;
+            background: url('fond1.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
-            padding: 15px 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        header nav a {
+        header a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            margin: 0 5px;
         }
-
-        header nav a:hover {
-            color: #ff6a00;
-        }
-
-        /* Section Hero */
-        .hero {
+        main {
+            padding: 20px;
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(45deg, #ff6a00, #ff9a00);
-            color: white;
         }
-
-        .hero h1 {
-            font-size: 2.8em;
-            margin-bottom: 15px;
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-
-        .hero p {
+        p {
             font-size: 1.2em;
-            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
-
-        .hero button {
-            background-color: #fff;
-            color: #ff6a00;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 25px;
+            background-color: rgba(255, 165, 0, 0.9);
+            color: white;
+            text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s;
         }
-
-        .hero button:hover {
-            background-color: #ff6a00;
-            color: white;
+        .btn:hover {
+            background-color: rgba(255, 140, 0, 1);
         }
-
-        /* Section Articles */
-        .articles {
-            padding: 50px 20px;
-            background-color: #fff;
-        }
-
-        .articles h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        .articles .article-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .articles .article-card {
-            width: 300px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .articles .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .articles .article-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .articles .article-card h3 {
-            padding: 15px;
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        .articles .article-card a {
-            display: block;
-            padding: 15px;
-            text-align: center;
-            background-color: #ff6a00;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 0 0 10px 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .articles .article-card a:hover {
-            background-color: #e65a00;
-        }
-
-        /* Pied de page */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
+        .news-section {
+            margin: 40px auto;
             padding: 20px;
+            background-color: rgba(255, 165, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            color: black;
+            max-width: 800px;
+            text-align: left;
         }
-
-        footer a {
-            color: #ff6a00;
+        .news-section h2 {
+            margin-top: 0;
+        }
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+        .news-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            color: black;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .news-list li a {
             text-decoration: none;
+            color: #2E3131;
             font-weight: bold;
-            transition: text-decoration 0.3s ease;
+            transition: color 0.3s;
         }
-
-        footer a:hover {
-            text-decoration: underline;
+        .news-list li a:hover {
+            color: #FF4500;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- En-tête -->
     <header>
-        <div class="logo">Graschatium</div>
+        <h1>Graschatium</h1>
         <nav>
+            <a href="index.html">Accueil</a>
             <a href="play.html">Jouer</a>
-            <a href="news.html">News</a>
-            <a href="support.html">Support</a>
-            <a href="règle.html">Règles</a>
-            <a href="https://graschatium.tebex.io">Boutique</a>
+            <a href="download.html">Téléchargement</a>
             <a href="staff.html">Staff</a>
+            <a href="bugs.html">Bug Report</a>
+            <a href="support.html">Support</a>
         </nav>
     </header>
 
-    <!-- Section Hero -->
-    <section class="hero">
+    <main>
         <h1>Bienvenue sur Graschatium</h1>
-        <p>Découvrez un univers fascinant avec nos factions, évènements et mises à jour incroyables.</p>
-        <button>Télécharger Maintenant</button>
+        <p>Rejoignez l'un des meilleurs serveurs PVP faction français et vivez une aventure unique !</p>
+        <a href="play.html" class="btn">Commencer à Jouer</a>
+        <a href="download.html" class="btn">Télécharger le Launcher</a>
+    </main>
+
+    <section class="news-section">
+        <h2>Dernières News</h2>
+        <ul class="news-list">
+            <li>
+                <span>Lucky Block - Édition de Mai</span>
+                <a href="articles/lucky-block-may.html">Lire la suite</a>
+            </li>
+            <li>
+                <span>Patch Note V9.5.11.0 | 03/05/2024</span>
+                <a href="articles/patch-note-v9.5.11.html">Lire la suite</a>
+            </li>
+            <li>
+                <span>Pillage d'une base claim</span>
+                <a href="articles/pillage-base.html">Lire la suite</a>
+            </li>
+            <li>
+                <span>Lucky Block - 7</span>
+                <a href="articles/lucky-block-7.html">Lire la suite</a>
+            </li>
+        </ul>
     </section>
 
-    <!-- Section Articles -->
-    <section class="articles" id="news">
-        <h2>Dernières nouvelles</h2>
-        <div class="article-grid">
-            <div class="article-card">
-                <img src="/article/newsimage/article1.jpg" alt="Article 1">
-                <h3>Graschatium BÊTA</h3>
-                <a href="article/article1.html">Lire l'article</a>
-            </div>
-            <div class="article-card">
-                <img src="/article/newsimage/article2.png" alt="Article 2">
-                <h3>Rejoignez le discord de Graschatium</h3>
-                <a href="/article/article discord.html">Lire l'article</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pied de page -->
     <footer>
-        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">CGU</a> | <a href="#privacy">Confidentialité</a></p>
+        <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

@@ -5,208 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graschatium - Jouer</title>
     <style>
-        /* Styles globaux */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-        }
-
-        /* En-tête */
-        header {
-            background-color: #333;
+            background: url('fond2.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
-            padding: 15px 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        header nav a {
+        header a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            margin: 0 5px;
         }
-
-        header nav a:hover {
-            color: #ff6a00;
-        }
-
-        /* Section Hero Jouer */
-        .play-hero {
+        main {
+            padding: 20px;
             text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+        h1, h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 25px;
+            background-color: rgba(255, 165, 0, 0.9);
             color: white;
-        }
-
-        .play-hero h1 {
-            font-size: 2.8em;
-            margin-bottom: 20px;
-        }
-
-        .play-hero p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-
-        .play-hero button {
-            background-color: #ff6a00;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-
-        .play-hero button:hover {
-            background-color: #e65a00;
+        .btn:hover {
+            background-color: rgba(255, 140, 0, 1);
         }
-
-        /* Liste des serveurs */
-        .server-list {
-            padding: 50px 20px;
-            background-color: #fff;
-        }
-
-        .server-list h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        .server-list .server-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .server-list .server-card {
-            width: 350px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .server-list .server-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .server-list .server-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .server-list .server-card h3 {
-            padding: 15px;
-            font-size: 1.3em;
-            color: #333;
-        }
-
-        .server-list .server-card p {
-            padding: 0 15px 15px;
-            font-size: 1em;
-            color: #555;
-        }
-
-        .server-list .server-card a {
-            display: block;
-            text-align: center;
-            padding: 15px;
-            background-color: #ff6a00;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 0 0 10px 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .server-list .server-card a:hover {
-            background-color: #e65a00;
-        }
-
-        /* Pied de page */
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
-            padding: 20px;
-        }
-
-        footer a {
-            color: #ff6a00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: text-decoration 0.3s ease;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- En-tête -->
     <header>
-        <div class="logo">Graschatium</div>
+        <h1>Graschatium</h1>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="#servers">Serveurs</a>
-            <a href="news.html">News</a>
-            <a href="support.html">Support</a>
-            <a href="#download">Télécharger</a>
+            <a href="play.html">Jouer</a>
+            <a href="download.html">Téléchargement</a>
             <a href="staff.html">Staff</a>
-            <a href="https://graschatium.tebex.io">Boutique</a>
+            <a href="bugs.html">Bug Report</a>
+            <a href="support.html">Support</a>
         </nav>
     </header>
 
-    <!-- Section Hero -->
-    <section class="play-hero">
-        <h1>Prêt à jouer ?</h1>
-        <p>Rejoignez des milliers de joueurs sur nos serveurs personnalisés et vivez une expérience unique.</p>
-        <a href="download.html">Cliquez ici pour commencer</a>
-    </section>
+    <main>
+        <h1>Jouer sur Graschatium</h1>
+        <p>Rejoignez notre serveur dès maintenant en suivant les étapes ci-dessous :</p>
+        <ol>
+            <li><a href="download.html" class="btn">Téléchargez le Launcher</a></li>
+            <li>Installez-le et connectez-vous avec votre compte Minecraft Java.</li>
+            <li>Rejoignez le serveur et commencez votre aventure !</li>
+        </ol>
+    </main>
 
-    <!-- Liste des Serveurs -->
-    <section class="server-list" id="servers">
-        <h2>Nos Serveurs</h2>
-        <div class="server-grid">
-            <div class="server-card">
-                <img src="server1.jpg" alt="Serveur PvP">
-                <h3>Serveur PvP</h3>
-                <p>Un serveur où vous pouvez montrer vos compétences de combat et devenir une légende.</p>
-                <a href="#">Rejoindre</a>
-            </div>
-            <div class="server-card">
-                <img src="server3.jpg" alt="Serveur Mini-Jeux">
-                <h3>Serveur Minage</h3>
-                <p>Découvrez une variété de minerai avec ce serveur, pourrez améliorer votre base dans le serveur factions.</p>
-                <a href="#">Rejoindre</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pied de page -->
     <footer>
-        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">CGU</a> | <a href="#privacy">Confidentialité</a></p>
+        <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
