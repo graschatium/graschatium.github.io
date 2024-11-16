@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graschatium - Serveur Discord</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff6a00;
+        }
+
+        /* Section article */
+        .article-container {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-container h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .article-container .date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .article-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .article-container p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Bouton retour */
+        .back-button {
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #ff6a00;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="logo">Graschatium</div>
+        <nav>
+            <a href="/index.html">Accueil</a>
+            <a href="/news.html">Actualités</a>
+            <a href="/play.html">Jouer</a>
+            <a href="#support">Support</a>
+        </nav>
+    </header>
+
+    <!-- Section article -->
+    <div class="article-container">
+        <h1>Rejoignez le serveur Discord officiel de Graschatium !</h1>
+        <p class="date">Publié le 16 novembre 2024</p>
+        <img src="discord-announcement.jpg" alt="Annonce du serveur Discord">
+        <p>
+            Nous avons une grande nouvelle à partager avec notre communauté : le serveur Discord officiel de Graschatium est désormais en ligne ! 
+            Rejoignez-nous pour discuter avec d'autres joueurs, obtenir les dernières actualités, et participer à des événements exclusifs.
+        </p>
+        <p>
+            Notre serveur Discord est conçu pour offrir une expérience conviviale et interactive. Vous pourrez :
+        </p>
+        <ul>
+            <li>Accéder aux annonces officielles en temps réel.</li>
+            <li>Discuter avec les développeurs et poser vos questions.</li>
+            <li>Participer à des discussions avec d'autres membres de la communauté.</li>
+            <li>Découvrir des événements spéciaux et des tournois organisés par Graschatium.</li>
+        </ul>
+        <p>
+            Nous croyons fermement en l'importance de créer un espace où notre communauté peut se connecter et échanger. Le serveur Discord sera également un endroit idéal pour partager vos idées, signaler des bugs, ou simplement vous amuser avec d'autres joueurs.
+        </p>
+        <p>
+            Cliquez sur le lien ci-dessous pour rejoindre notre serveur Discord dès maintenant :
+        </p>
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="https://discord.gg/exemple" style="
+                text-decoration: none; 
+                color: white; 
+                background-color: #7289DA; 
+                padding: 10px 20px; 
+                border-radius: 5px; 
+                font-weight: bold;
+                font-size: 1.2rem;
+                display: inline-block;">
+                Rejoindre le Discord
+            </a>
+        </div>
+        <p>
+            Merci de faire partie de cette incroyable aventure avec nous. Nous avons hâte de vous retrouver sur Discord !
+        </p>
+
+        <div class="back-button">
+            <a href="/news.html">← Retour aux actualités</a>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 Graschatium. Tous droits réservés. <a href="#terms">Conditions générales</a></p>
+    </footer>
+</body>
+</html>
