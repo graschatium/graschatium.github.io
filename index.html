@@ -9,12 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('fond1.jpg') no-repeat center center fixed;
+            background: url('background.jpg') no-repeat center center fixed; /* Remplacez 'background.jpg' par le chemin de votre image */
             background-size: cover;
             color: white;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8); /* Une légère transparence pour contraster avec l'image de fond */
             color: white;
             padding: 10px 20px;
             display: flex;
@@ -53,49 +53,14 @@
         .btn:hover {
             background-color: rgba(255, 140, 0, 1);
         }
-        .news-section {
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255, 165, 0, 0.8);
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            color: black;
-            max-width: 800px;
-            text-align: left;
-        }
-        .news-section h2 {
-            margin-top: 0;
-        }
-        .news-list {
-            list-style: none;
-            padding: 0;
-        }
-        .news-list li {
-            margin: 10px 0;
-            padding: 10px;
-            background: white;
-            color: black;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .news-list li a {
-            text-decoration: none;
-            color: #2E3131;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .news-list li a:hover {
-            color: #FF4500;
-        }
         footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
             padding: 10px;
-            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -118,20 +83,6 @@
         <a href="play.html" class="btn">Commencer à Jouer</a>
         <a href="download.html" class="btn">Télécharger le Launcher</a>
     </main>
-
-    <section class="news-section">
-        <h2>Dernières News</h2>
-        <ul class="news-list">
-            <li>
-                <span>Ouverture du serveur</span>
-                <a href="/articles/article1.html">Lire la suite</a>
-            </li>
-            <li>
-                <span>Nouveau discord | 03/05/2024</span>
-                <a href="/articles/article discord.html">Lire la suite</a>
-            </li>
-        </ul>
-    </section>
 
     <footer>
         <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
