@@ -9,12 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('fond1.jpg') no-repeat center center fixed; /* Remplacez 'background.jpg' par le chemin de votre image */
+            background: url('fond1.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.8); /* Une légère transparence pour contraster avec l'image de fond */
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 10px 20px;
             display: flex;
@@ -62,9 +62,42 @@
             bottom: 0;
             width: 100%;
         }
+        
+        /* Diaporama en bas à gauche */
+        .slideshow-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 5;
+            width: 250px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Menu de navigation -->
     <header>
         <h1>Graschatium</h1>
         <nav>
@@ -77,6 +110,20 @@
         </nav>
     </header>
 
+    <!-- Diaporama en bas à gauche -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <a href="article1.html"><img src="https://via.placeholder.com/250x150/FF5733/FFFFFF?text=Article+1" alt="Article 1"></a>
+        </div>
+        <div class="slide fade">
+            <a href="article2.html"><img src="https://via.placeholder.com/250x150/33C1FF/FFFFFF?text=Article+2" alt="Article 2"></a>
+        </div>
+        <div class="slide fade">
+            <a href="article3.html"><img src="https://via.placeholder.com/250x150/33FF57/FFFFFF?text=Article+3" alt="Article 3"></a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
     <main>
         <h1>Bienvenue sur Graschatium</h1>
         <p>Rejoignez l'un des meilleurs serveurs PVP faction français et vivez une aventure unique !</p>
@@ -84,8 +131,27 @@
         <a href="download.html" class="btn">Télécharger le Launcher</a>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
     </footer>
+
+    <!-- Script pour faire défiler les images du diaporama -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
 </body>
 </html>
