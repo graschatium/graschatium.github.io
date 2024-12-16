@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report - Graschatium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 165, 0, 0.9);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: rgba(255, 140, 0, 1);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de navigation -->
+    <header>
+        <h1>Graschatium</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="play.html">Jouer</a>
+            <a href="download.html">Téléchargement</a>
+            <a href="staff.html">Staff</a>
+            <a href="bugs.html">Bug Report</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+    <!-- Formulaire de soumission de bug -->
+    <main>
+        <h1>Signaler un Bug</h1>
+        <p>Merci de nous aider à améliorer Graschatium. Veuillez remplir le formulaire ci-dessous pour signaler un bug rencontré :</p>
+
+        <form action="https://formspree.io/f/xrbgwqzj" method="POST">
+            <div class="form-group">
+                <label for="name">Votre Nom</label>
+                <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre adresse email">
+            </div>
+
+            <div class="form-group">
+                <label for="bug-category">Catégorie du Bug</label>
+                <select id="bug-category" name="bug-category" required>
+                    <option value="graphique">Problème Graphique</option>
+                    <option value="son">Problème Sonore</option>
+                    <option value="connexion">Problème de Connexion</option>
+                    <option value="performance">Problème de Performance</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description du Bug</label>
+                <textarea id="description" name="description" required placeholder="Décrivez le bug rencontré"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Soumettre le Bug</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Graschatium. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
