@@ -78,6 +78,27 @@
             font-weight: bold;
             color: #333;
         }
+
+        /* Style du bouton */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+        }
     </style>
 </head>
 <body>
@@ -89,7 +110,7 @@
             <a href="news.html">Actualités</a>
             <a href="play.html">Jouer</a>
             <a href="support.html">Support</a>
-            <a href="staff.html">Staff</a>
+            <a href="#">Staff</a>
             <a href="https://graschatium.tebex.io">Boutique</a>
         </nav>
     </header>
@@ -101,9 +122,14 @@
             <li><span>Legraschat</span> - Fondateur & Développeur Principal</li>
             <li><span>Mondun</span> - Partenaire</li>
             <li><span>MrSmaley</span> - Responsable Communauté</li>
-            <li><span>En recrutement</span> - Modératrice</li>
+            <li><span>En recrutement</span> - Modératreur(ice)</li>
             <li><span>En recrutement</span> - Designer Graphique</li>
         </ul>
+
+        <!-- Bouton Rejoindre l'équipe -->
+        <div class="button-container">
+            <button onclick="window.location.href='formstaff.html'">Rejoindre l'Équipe</button>
+        </div>
     </div>
 </body>
 </html>
