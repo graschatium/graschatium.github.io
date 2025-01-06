@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre achat !</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+
+        .grade {
+            font-weight: bold;
+            color: #ff9800;
+            font-size: 1.3rem;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: #2196F3;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1976D2;
+        }
+
+        .btn-discord {
+            background-color: #5865F2;
+        }
+
+        .btn-discord:hover {
+            background-color: #4851C9;
+        }
+
+        /* Animation de fade in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Confettis */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            top: -10px;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <h1>🎉 Merci pour votre achat !</h1>
+        <p>Votre soutien aide <strong>Graschatium</strong> à grandir.</p>
+        <p>Vous avez reçu le grade <span class="grade" id="grade-name">Chevalier</span> avec succès !</p>
+
+        <div class="btn-container">
+            <a href="https://graschatium.tebex.io" class="btn">Retour à la Boutique</a>
+            <a href="index.html" class="btn btn-secondary">Accueil</a>
+            <a href="https://discord.gg/mPKSgpt3DN" class="btn btn-discord">Rejoindre Discord</a>
+        </div>
+    </div>
+
+    <!-- Script pour les confettis et personnalisation dynamique -->
+    <script>
+        // Générer des confettis
+        function createConfetti() {
+            const confettiCount = 150;
+            const colors = ['#FFD700', '#FF4500', '#4CAF50', '#2196F3', '#FF69B4'];
+
+            for (let i = 0; i < confettiCount; i++) {
+                let confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.opacity = Math.random();
+                confetti.style.width = `${Math.random() * 10 + 5}px`;
+                confetti.style.height = confetti.style.width;
+                document.body.appendChild(confetti);
+
+                // Supprimer les confettis après l'animation
+                confetti.addEventListener('animationend', () => {
+                    confetti.remove();
+                });
+            }
+        }
+
+        // Lancer les confettis au chargement de la page
+        window.onload = () => {
+            createConfetti();
+            // Exemple de personnalisation dynamique
+            const params = new URLSearchParams(window.location.search);
+            const grade = params.get('grade');
+            if (grade) {
+                document.getElementById('grade-name').textContent = grade;
+            }
+        };
+    </script>
+
+</body>
+</html>
