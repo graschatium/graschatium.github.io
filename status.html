@@ -25,6 +25,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         header a {
             color: white;
             text-decoration: none;
@@ -44,19 +45,6 @@
             color: #4CAF50;
         }
 
-        .status {
-            margin: 20px 0;
-            font-size: 1.5rem;
-        }
-
-        .status.up {
-            color: #4CAF50;
-        }
-
-        .status.down {
-            color: #f44336;
-        }
-
         .rss-link {
             margin-top: 20px;
             display: inline-block;
@@ -74,26 +62,31 @@
             color: white;
         }
     </style>
+    <!-- Intégration du widget Statuspage -->
+    <script src="https://graschatium.statuspage.io/embed/script.js"></script>
 </head>
-<header>
-    <h1>Graschatium</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="play.html">Jouer</a>
-        <a href="download.html">Téléchargement</a>
-        <a href="staff.html">Staff</a>
-        <a href="bug-report.html">Report</a>
-        <a href="support.html">Support</a>
-    </nav>
-</header>
 <body>
+
+    <header>
+        <h1>Graschatium</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="play.html">Jouer</a>
+            <a href="download.html">Téléchargement</a>
+            <a href="staff.html">Staff</a>
+            <a href="bug-report.html">Report</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
 
     <div class="status-container">
         <h1>Statut du Serveur</h1>
-        <div class="status up">✅ En Ligne</div>
-        
+
+        <!-- Ici, le widget de Statuspage sera intégré -->
+        <div id="statuspage-widget"></div>
+
         <p>Dernière mise à jour : <strong id="last-update">29 Décembre 2024</strong></p>
-        
+
         <a href="rss.xml" class="rss-link">🔔 Voir les mises à jour RSS</a>
     </div>
 
